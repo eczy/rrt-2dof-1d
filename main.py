@@ -63,17 +63,6 @@ def demo():
     def nearest_vertex(v, V):
         return min([(i, x, np.linalg.norm(v - x)) for i, x in enumerate(V)], key=lambda x: x[2])
 
-    # # Construct the graph
-    # def find_nearest_vertex(s_rand):
-    #     s_near = None
-    #     nearest_distance = np.inf()
-    #     for i in range(len(V)):
-    #         curr_distance = np.linalg.norm(V[i] - s_rand)
-    #         if curr_distance < nearest_distance:
-    #             nearest_distance = curr_distance
-    #             s_near = V[i]
-    #     return s_near
-
     def drive_to(v, u):
         """Drive from v to u."""
         delta_p = v[0] - u[0]
